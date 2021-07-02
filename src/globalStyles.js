@@ -31,7 +31,7 @@ padding-bottom:0;
 export const Button = styled.button`
 border-radius:${({radius})=>(radius?radius:'20px')};
 border:none;
-
+font-size:${({fontSize})=>fontSize?fontSize:null};
 outline:none;
 cursor:pointer;
 width:${({width})=>(width?width:'100%')};
