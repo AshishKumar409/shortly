@@ -3,6 +3,8 @@ import {FaBars} from 'react-icons/fa'
 import {Button} from '../../globalStyles'
 import { IconContext } from 'react-icons/lib'
 import { Nav ,NavbarContainer,NavTitle,MobileIcon,NavMenu,NavLinks,NavItem,Break} from './Navbar.elements'
+
+
 const Navbar = () => {
   const [click,setClick] = useState(false)
   const handleClick=()=>{ setClick(!click)}

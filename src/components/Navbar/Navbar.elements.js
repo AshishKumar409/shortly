@@ -9,25 +9,30 @@ display:flex;
 justify-content:center;
 align-items:center;
 font-size:1.2rem;
-position:sticky;
+/* position:sticky; */
 top:0;
 z-index:998;
 `
 export const NavbarContainer = styled(Container)`
   display:flex;
-  justify-content:space-evenly;
+  justify-content:space-between;
   height:80px;
-
+  /* border:2px solid; */
   ${Container}
 `
 export const NavTitle = styled(Link)`
+display:flex;
+/* border:2px solid; */
 color:black;
 justify-content:flex-start;
 cursor:pointer;
 text-decoration:none;
 font-size:2rem;
-display:flex;
 align-items:center;
+
+@media screen and (max-width:960px){
+/* margin-left:0px; */
+}
 `
 
 export const MobileIcon = styled.div`
