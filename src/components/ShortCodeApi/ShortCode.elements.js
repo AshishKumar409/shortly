@@ -227,7 +227,7 @@ background-color:#2acfcf;
 
 export const BoostContainer = styled.div`
 margin-top:60px;
-height:250px;
+height:150px;
 display:flex;
 flex-direction:column;
 justify-content:center;

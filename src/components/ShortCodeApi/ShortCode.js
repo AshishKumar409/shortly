@@ -38,7 +38,7 @@ const handleClick=(e)=>{
      return
    }
    async function shortLink(input){
-    alert("wait till we shorten the URL.")
+    alert("Shortening of URL can take upto 5-20 seconds, So please wait..")
     let response = await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`)
     let data = await response.json()
     obj.fullLink = await data.result.original_link
