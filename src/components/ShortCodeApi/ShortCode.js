@@ -1,11 +1,11 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import { ApiSec,Box,InputForm,ButtonElement,TextBoxContainer,TextBox } from './ShortCode.elements'
 import { Container } from '../../globalStyles'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 const ShortCode = () => {
   const [array,setArray] = useState([]) 
-  const [copied,setCopied] = useState(false) 
+  
   
   const [input,setInput] = useState("") 
    let obj = {}
@@ -41,7 +41,7 @@ const ShortCode = () => {
              <TextBoxContainer>
                <TextBox>{object.name}</TextBox>
                <TextBox green={true}>{object.length}</TextBox>
-               <CopyToClipboard text={object.name} onCopy={() => setCopied(true)}>
+               <CopyToClipboard text={object.name} onCopy={() =>alert("copied")}>
                <ButtonElement onClick={handleCopy}>Copy</ButtonElement>
                </CopyToClipboard>
              </TextBoxContainer>
