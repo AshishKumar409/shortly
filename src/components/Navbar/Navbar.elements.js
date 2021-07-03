@@ -15,10 +15,13 @@ z-index:998;
 `
 export const NavbarContainer = styled(Container)`
   display:flex;
+  
   justify-content:space-between;
   height:80px;
+  
   /* border:2px solid; */
   ${Container}
+  
 `
 export const NavTitle = styled(Link)`
 display:flex;
@@ -32,6 +35,7 @@ align-items:center;
 
 @media screen and (max-width:960px){
 /* margin-left:0px; */
+ 
 }
 `
 

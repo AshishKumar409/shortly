@@ -171,7 +171,7 @@ align-self:${({value})=>value};
 background-color:white;
 border-radius:5px;
 padding:10px;
-width:320px;
+width:330px;
 height:200px;
 @media screen and  (max-width:768px){
   align-self:unset;
@@ -192,17 +192,21 @@ border-radius:50%;
 height:60px;
 width:60px;
 @media screen and  (max-width:768px){
-  left:130px;
+  left:135px;
 
 }
 `
 export const TextHeaderCard = styled.h3`
 color:black;
-
+/* text-align:center; */
+padding-top:40px;
+padding-left:20px;
+padding-right:20px;
 margin-bottom:5px;
 `
 export const TextParaCard = styled.h5`
-
+padding-left:20px;
+padding-right:20px;
 color:gray;
 margin-bottom:5px;
 `

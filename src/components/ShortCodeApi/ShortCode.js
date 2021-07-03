@@ -75,26 +75,26 @@ const handleClick=(e)=>{
 
             <TextStaisticsContainer>
                <TextHeader>Advanced Statistics</TextHeader>
-               <TextPara>Track how your likns are performing across the web with our powerful advanced statistics dashboard</TextPara>
+               <TextPara>Track how your links are performing across the web with our powerful advanced statistics dashboard</TextPara>
             </TextStaisticsContainer>
 
             <Cards>
               <CardContainer value={"flex-start"}>
                <IconRound image={brandRec}/>
-                <TextHeaderCard></TextHeaderCard>
-                <TextParaCard></TextParaCard>
+                <TextHeaderCard>Brand recognition</TextHeaderCard>
+                <TextParaCard>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</TextParaCard>
               </CardContainer>
               <Stick/>
               <CardContainer value={"center"}>
                <IconRound image={detailRec}/>
-                <TextHeaderCard></TextHeaderCard>
-                <TextParaCard></TextParaCard>
+                <TextHeaderCard>Detailed Records</TextHeaderCard>
+                <TextParaCard>Gain insights in who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</TextParaCard>
               </CardContainer>
               <Stick/>
               <CardContainer value={"flex-end"}>
                <IconRound image={custom}/>
-                <TextHeaderCard></TextHeaderCard>
-                <TextParaCard></TextParaCard>
+                <TextHeaderCard>Fully Customizable</TextHeaderCard>
+                <TextParaCard>Improve brand awareness and content discoverability through customizable links. supercharging audience engagement.</TextParaCard>
               </CardContainer>
             </Cards>
        </Container>
