@@ -16,17 +16,16 @@ const handleClick=()=>{
      return
    }
    async function shortLink(input){
-
+    alert("wait till we shorten the URL.")
     let response = await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`)
     let data = await response.json()
-    console.log(data);
     obj.fullLink = await data.result.original_link
     obj.shortLink = await data.result.short_link
     obj.shortLink2 = await data.result.short_link2
     obj.id = await data.result.code
     setArray([...array,obj])
     
-    console.log(obj)
+
     }
     shortLink(input) 
     setInput("")    
@@ -38,7 +37,7 @@ const handleClick=()=>{
   }
  
   useEffect(()=>{
-  console.log("changed")
+  
   })
   
    
