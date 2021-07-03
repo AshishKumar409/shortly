@@ -1,5 +1,22 @@
 import React,{useState,useEffect} from 'react'
-import { ApiSec,Box,InputForm,ButtonElement,TextBoxContainer,TextBox,TextStaisticsContainer,TextPara,TextHeader,Cards,CardContainer,IconRound,TextParaCard,TextHeaderCard,Stick } from './ShortCode.elements'
+import { 
+  ApiSec,
+  Box,InputForm,
+  ButtonElement
+  ,TextBoxContainer,
+  TextBox,
+  TextStaisticsContainer,
+  TextPara,
+  TextHeader,
+  Cards,
+  CardContainer,
+  IconRound,
+  TextParaCard,
+  TextHeaderCard,
+  Stick ,
+  BoostContainer
+
+} from './ShortCode.elements'
 import { Container } from '../../globalStyles'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import brandRec from '../../images/icon-brand-recognition.svg'
@@ -74,7 +91,7 @@ const handleClick=(e)=>{
             })}
 
             <TextStaisticsContainer>
-               <TextHeader>Advanced Statistics</TextHeader>
+               <TextHeader color="black">Advanced Statistics</TextHeader>
                <TextPara>Track how your links are performing across the web with our powerful advanced statistics dashboard</TextPara>
             </TextStaisticsContainer>
 
@@ -97,7 +114,12 @@ const handleClick=(e)=>{
                 <TextParaCard>Improve brand awareness and content discoverability through customizable links. supercharging audience engagement.</TextParaCard>
               </CardContainer>
             </Cards>
+            
        </Container>
+       <BoostContainer>
+              <TextHeader>Boost your links today</TextHeader>
+              <ButtonElement value={"180px"} radius={"20px"}> Get Started</ButtonElement>
+            </BoostContainer>
      </ApiSec> 
     </>
   )

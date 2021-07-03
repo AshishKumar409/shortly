@@ -1,15 +1,16 @@
 import styled from 'styled-components'
 import desktopImg from '../../images/bg-shorten-desktop.svg'
 import MobImg from '../../images/bg-shorten-mobile.svg'
-// import desktopBoostImg from '../../images/bg-boost-desktop.svg'
-// import MobBoostImg from '../../images/bg-boost-mobile.svg'
+import desktopBoostImg from '../../images/bg-boost-desktop.svg'
+import MobBoostImg from '../../images/bg-boost-mobile.svg'
 
 
 
 
 export const ApiSec = styled.div`
 color:#fff;
-padding:160px 0;
+padding-top:120px;
+padding-bottom:0px;
 max-width:100%;
 
 background:lightgray;
@@ -28,11 +29,11 @@ display:flex;
 border-radius:5px;
 justify-content:space-between;
 align-items:center;
-height:90px;
+height:100px;
 width:50%;
 padding:20px;
 position:absolute;
-top:-35px;
+top:-50px;
 left:25%;
 
   
@@ -42,12 +43,13 @@ left:25%;
 @media screen and  (max-width:768px){
   flex-direction:column;
   /* height:0px; */
+  width:80%;
   background:url(${MobImg});
   background-color: #3b3054;
   background-blend-mode: multiply;
   align-content:space-evenly;
   padding:10px;
- 
+  left:10%;
  
   
 }
@@ -73,16 +75,16 @@ border-radius:5px;
 
 export const ButtonElement = styled.button`
  
- width:18%;
+ width:${({value})=>value?value:"18%"};
  height:40px;
  /* padding:2px; */
  border:none;
  color:white;
 font-size:12px;
  background-color:#2acfcf;
- border-radius:5px;
+ border-radius:${({radius})=>radius?radius:"6px"};
  @media screen and  (max-width:768px){
-   width:80%;
+   width:${({value})=>value?value:"80%"};
    height:30px;
  }
  &:hover{
@@ -127,6 +129,7 @@ export const TextStaisticsContainer = styled.div`
 width:40%;
 position: relative;
 left:30%;
+margin-top:80px;
 padding-left:100px;
 padding-right:100px;
 
@@ -142,7 +145,8 @@ text-align:center;
 `
 
 export const TextHeader = styled.h2`
-color:black;
+color:${({color})=>color};
+font-size:25px;
 margin-bottom:5px;
 `
 export const TextPara = styled.h5`
@@ -219,4 +223,20 @@ background-color:#2acfcf;
  width:5px;
  height:50px;
  }
+`
+
+export const BoostContainer = styled.div`
+margin-top:60px;
+height:250px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:url(${desktopBoostImg});
+background-color:#3b3054;
+
+@media screen and  (max-width:768px){
+background:url(${MobBoostImg});
+background-color:#3b3054;
+}
 `
