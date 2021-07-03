@@ -171,7 +171,7 @@ align-self:${({value})=>value};
 background-color:white;
 border-radius:5px;
 padding:10px;
-width:310px;
+width:320px;
 height:200px;
 @media screen and  (max-width:768px){
   align-self:unset;
@@ -190,8 +190,11 @@ background-repeat:no-repeat;
 background-blend-mode:color-dodge;
 border-radius:50%;
 height:60px;
-
 width:60px;
+@media screen and  (max-width:768px){
+  left:130px;
+
+}
 `
 export const TextHeaderCard = styled.h3`
 color:black;
@@ -210,6 +213,6 @@ background-color:#2acfcf;
 
  @media screen and  (max-width:768px){
  width:5px;
- height:25px;
+ height:50px;
  }
 `
