@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { ApiSec,Box,InputForm,ButtonElement,TextBoxContainer,TextBox } from './ShortCode.elements'
 import { Container } from '../../globalStyles'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
@@ -8,19 +8,41 @@ const ShortCode = () => {
   
   
   const [input,setInput] = useState("") 
-   let obj = {}
-  const handleClick=()=>{
+  let obj = {}
+  
+
+const handleClick=()=>{
    if(input===""){
      return
    }
-   obj.name = input
-   obj.length = input.length 
-   setArray([...array,obj])
+   async function shortLink(input){
+
+    let response = await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`)
+    let data = await response.json()
+    console.log(data);
+    obj.fullLink = await data.result.original_link
+    obj.shortLink = await data.result.short_link
+    obj.shortLink2 = await data.result.short_link2
+    obj.id = await data.result.code
+    setArray([...array,obj])
+    
+    console.log(obj)
+    }
+    shortLink(input) 
+    setInput("")    
   }
 
   const handleChange=(e)=>{
     setInput(e.target.value)
+    
   }
+ 
+  useEffect(()=>{
+  console.log("changed")
+  })
+  
+   
+    
 
   const handleCopy=(e)=>{
     e.target.innerHTML = "Copied"
@@ -35,19 +57,17 @@ const ShortCode = () => {
          <InputForm placeholder="shorten your link!" onChange={handleChange} value={input}/>
           <ButtonElement onClick={handleClick}>Shorten it!</ButtonElement>
         </Box>
-        {
-            array.map((object)=>{
-              return <>
-             <TextBoxContainer>
-               <TextBox>{object.name}</TextBox>
-               <TextBox green={true}>{object.length}</TextBox>
-               <CopyToClipboard text={object.name} onCopy={() =>alert("copied")}>
+        {array.map((object)=>{
+              return <>{object.id ?
+             <TextBoxContainer key={object.id}>
+               <TextBox >{object.fullLink?object.fullLink:null}</TextBox>
+               <TextBox  green={true}>{object.shortLink?object.shortLink:null}</TextBox>
+               <CopyToClipboard text={object.shortLink?object.shortLink:null} onCopy={() => true}>
                <ButtonElement onClick={handleCopy}>Copy</ButtonElement>
                </CopyToClipboard>
              </TextBoxContainer>
-              </>
-            })
-          }
+            :<TextBox>Wait</TextBox>}</>
+            })}
        </Container>
      </ApiSec> 
     </>

@@ -97,8 +97,8 @@ justify-content:space-around;
 align-items:center;
  @media screen and  (max-width:768px){
  flex-direction:column;
-  width:80%;
-  left:10%
+  width:95%;
+  left:5%
  }
 
 `
