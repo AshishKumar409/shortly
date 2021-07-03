@@ -1,7 +1,11 @@
 import React,{useState,useEffect} from 'react'
-import { ApiSec,Box,InputForm,ButtonElement,TextBoxContainer,TextBox } from './ShortCode.elements'
+import { ApiSec,Box,InputForm,ButtonElement,TextBoxContainer,TextBox,TextStaisticsContainer,TextPara,TextHeader,Cards,CardContainer,IconRound,TextParaCard,TextHeaderCard,Stick } from './ShortCode.elements'
 import { Container } from '../../globalStyles'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import brandRec from '../../images/icon-brand-recognition.svg'
+import detailRec from '../../images/icon-detailed-records.svg'
+import custom from '../../images/icon-fully-customizable.svg'
+
 
 const ShortCode = () => {
   const [array,setArray] = useState([]) 
@@ -68,6 +72,31 @@ const handleClick=(e)=>{
              </TextBoxContainer>
             :<TextBox>Wait</TextBox>}</>
             })}
+
+            <TextStaisticsContainer>
+               <TextHeader>Advanced Statistics</TextHeader>
+               <TextPara>Track how your likns are performing across the web with our powerful advanced statistics dashboard</TextPara>
+            </TextStaisticsContainer>
+
+            <Cards>
+              <CardContainer value={"flex-start"}>
+               <IconRound image={brandRec}/>
+                <TextHeaderCard></TextHeaderCard>
+                <TextParaCard></TextParaCard>
+              </CardContainer>
+              <Stick/>
+              <CardContainer value={"center"}>
+               <IconRound image={detailRec}/>
+                <TextHeaderCard></TextHeaderCard>
+                <TextParaCard></TextParaCard>
+              </CardContainer>
+              <Stick/>
+              <CardContainer value={"flex-end"}>
+               <IconRound image={custom}/>
+                <TextHeaderCard></TextHeaderCard>
+                <TextParaCard></TextParaCard>
+              </CardContainer>
+            </Cards>
        </Container>
      </ApiSec> 
     </>

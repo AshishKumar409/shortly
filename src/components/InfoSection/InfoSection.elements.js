@@ -24,7 +24,6 @@ export const InfoColumn = styled.div`
 overflow:hidden;
 display:flex;
 margin-top:0;
-/* border:2px solid black; */
 justify-content:space-evenly;
 margin-bottom:15px;
 padding-right:15px;
