@@ -11,8 +11,9 @@ const ShortCode = () => {
   let obj = {}
   
 
-const handleClick=()=>{
+const handleClick=(e)=>{
    if(input===""){
+     alert("Enter your Url!!")
      return
    }
    async function shortLink(input){
