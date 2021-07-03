@@ -53,7 +53,7 @@ cursor:pointer;
 export const NavMenu = styled.ul`
 display:flex;
 /* border:2px solid; */
-/* justify-content:flex-start; */
+justify-content:flex-start;
 align-items:center;
 list-style:none;
 text-align:center;
@@ -64,7 +64,7 @@ text-align:center;
  
   flex-direction:column;
   width:80%;
-  height:55vh;
+  /* height:55vh; */
   text-align:center;
   border-radius:15px;
   color:white;

@@ -16,8 +16,9 @@ const Navbar = () => {
          <NavTitle to="/">
            Shortly
          </NavTitle>
+
          <MobileIcon onClick={handleClick}>
-           <FaBars/>
+           <FaBars/> 
          </MobileIcon>
 
         <NavMenu onClick={handleClick} click={click}>
