@@ -41,16 +41,19 @@ const handleClick=(e)=>{
     alert("Shortening of URL can take upto 5-20 seconds, So please wait..")
     let response = await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`)
     let data = await response.json()
-    obj.fullLink = await data.result.original_link
-    obj.shortLink = await data.result.short_link
-    obj.shortLink2 = await data.result.short_link2
-    obj.id = await data.result.code
+    let {original_link,short_link,code} = await data.result
+    obj.fullLink = original_link
+    obj.shortLink = short_link
+    obj.id = code
+    console.log(obj)
+    // obj.shortLink2 = await data.result.short_link2
+    setInput("") 
     setArray([...array,obj])
     
 
     }
     shortLink(input) 
-    setInput("")    
+       
   }
 
   const handleChange=(e)=>{
